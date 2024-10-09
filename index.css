@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.menu{
+    display: none;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+   
+    align-items: center;
+    list-style: none;
+    
+}
+
+li{
+    display: block;
+   color: white; 
+   cursor: pointer;
+   font-family: "Roboto", sans-serif;
+   font-weight: 800;
+   padding: 10px 25px;
+  
+  
+}
+
+
+
+li:hover{
+    color:red
+}
+
+.active{
+   height: 450px;
+   
+}
+
+@media only screen and (max-width:1320px) {
+    header{
+        padding: 0 50px;
+    }
+}
+
+@media  only screen and (max-width: 900px) {
+  .menu{
+    display: block;
+    cursor: pointer;
+  }    
+  .menu .line{
+     width: 30px;
+     height: 3px;
+     background-color: white ;
+     margin: 5px 0;
+  }
+  nav{
+    display: flex;
+    flex-direction: column;
+   
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: black;
+    transition: 0.2s;
+    opacity: 0;
+  }
+  nav li{
+     
+     margin: 50px auto 0 auto;
+     transition: 0.5s;
+  }
+  .active{
+    opacity: 1; 
+  }
+}
+
+
+.hero{
+    background-color: black;
+    color: White;
+    /* background-blend-mode: color-burn; */
+}
+
+.middle{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 6rem;
+    animation: slide 1s ease forwards;
+}
+
+.content{
+    width: 30rem;
+}
+
+.work{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card1,.card2,.card3,.card4{
+    padding: 90px 40px;
+    background-color: bisque;
+    box-shadow: 2px 3px 5px rgb(30, 42, 210);
+    
+}
+
+.clients{
+   
+    margin-top: 30px;
+    text-align: center;
+}
+
+.clients h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.clients p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.clients span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+}
+
+
+
+
+@keyframes slide {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+}
+
+
+.footer {
+    background: linear-gradient(135deg, #11a3cb 0%, #2575fc 100%);
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.footer-logo img {
+    width: 120px;
+    height: auto;
+    animation: logoBounce 3s infinite;
+}
+
+
+.footer-newsletter {
+    margin: 20px;
+}
+
+.footer-newsletter h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    animation: slideInFromLeft 1.5s ease-out;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    width: 250px;
+    margin-right: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.newsletter-form input[type="email"]:focus {
+    transform: scale(1.05);
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #ff4d4d;
+}
+
+
+.footer-contact h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    animation: slideInFromRight 1.5s ease-out;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    animation: fadeInUp 4.5s ease-out;
+}
+
+@keyframes logoBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-newsletter,
+    .footer-contact {
+        margin-top: 30px;
+    }
+}

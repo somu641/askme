@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <title>Web Development and Website</title>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="img">
+        <div class="menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+       
+        <nav>
+           
+            <li>Home</li>
+            <li>About Us</li>
+            <li> Services</li>
+            <li>Contact</li>
+            <li>Login</li>
+        </nav>
+    </header>
+    <div class="hero">
+        <h1>Who we are</h1>
+        <li>Home</li>
+        <li>About Us</li>
+
+    </div>
+    <div class="middle">
+        <img src="hero.png" alt="noimg">
+        <div class="content">
+        <h1>Leading Software Development Company In Hyderabad, India.</h1>
+        <br>
+        <p>ASKMEGURU TECHNOLOGIES is the leading digital platform for all business firms across the world and an one stop automated solution for your trade and industry. ASKMEGURU TECHNOLOGIES began its business operation in bulk SMS and Digital Marketing solutions providing company in December 2013. On the public interest we have done our platform into all over Telangana state focusing exclusively in high quality and cost-effective software development and implementation of services. We are advancing on a tremendous pace and with involvement of 15 + skilled and experienced people working in the organization. Depending on the size and field of your organization, we have different products and services to meet your requirements. We provide the optimum and customized solutions made for your organization. ASKMEGURU is a leading provider of white label search & monetization solutions. We serve a network of more than 100 web publishers globally. Offering core search solutions as a proven means to monetize audience via a search based advertising revenue stream.</p>
+    </div>
+    </div>
+     
+     <div class="work">
+        <div class="card1">
+       <h1 class="numb" data-val="600">000+</h1>
+       <p1>HAPPY CUSTOMERS</p1>
+    </div>
+    <div class="card2">
+       <h1 class="numb" data-val="100%">000%</h1>
+       <p1>Satisfied Customer</p1>
+    </div>
+      <div class="card3">
+       <h1 class="numb" data-val="350+" >000+</h1>
+       <p1>Projects</p1>
+    </div>
+    <div class="card4">
+       <h1 class="numb" data-val="7">0+</h1>
+       <p1>Experience</p1> 
+    </div>
+     </div>
+
+    <div class="clients">
+        <h1>Our clients</h1>
+        <p>Some of our clients taken software solution from us</p>
+        <span>
+            <img src="logo.png" alt=""><img src="logo.png" alt=""><img src="logo.png" alt=""><img src="logo.png" alt=""><img src="logo.png" alt="">
+        </span>
+    </div>
+     
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Company Logo">
+            </div>
+    
+            <div class="footer-newsletter">
+                <h2>Subscribe to our Newsletter</h2>
+                <form action="#" class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+    
+            <div class="footer-contact">
+                <h2>Contact Us</h2>
+                <p>Email: info@example.com</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Address: 123 Example St, City, Country</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script>
+        hey=document.querySelector(".menu");
+        hey.onclick=function(){
+            navbar=document.querySelector("nav");
+            navbar.classList.toggle("active");
+        }
+        num=document.querySelectorAll(".numb");
+        let interval = 4000;
+        console.log(num);
+        num.forEach((element) => {
+            let start=0;
+            let endval=parseInt(element.getAttribute("data-val"));
+            let duration = Math.floor(interval/endval);
+            let counter = setInterval(function (){
+                start+=1;
+                element.textContent=start;
+                console.log(start)
+                if(start===endval){
+                   clearInterval(counter);
+                }
+            },duration);
+        });
+
+    </script>
+</body>
+</html>
